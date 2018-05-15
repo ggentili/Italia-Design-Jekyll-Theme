@@ -51,13 +51,11 @@ layout: default
                         <div class="Grid-cell u-nbfc u-md-size3of4 u-lg-size3of4">
 
                             <div class="Grid u-layout-centerContent">
+                                {% if post.thumbnail %}
                                 <div class="Grid-cell u-sizeFit">
-                                  {% if post.background %}
-                                    <img src="{{ post.background | relative_url }}" width="300" height="300" class="u-sizeFit" alt="primo post" />
-                                  {% else %}
-                                    <img src="//placehold.it/330x330?text=placeholder" class="u-sizeFit" alt="primo post" />
-                                  {% endif %}
+                                    <img src="{{ post.thumbnail | relative_url }}" width="300" height="300" class="u-sizeFit" alt="primo post" />
                                 </div>
+                                {% endif %}
                                 <div class="Grid-cell u-md-sizeFill u-lg-sizeFill u-padding-r-left">
                       {% else %}
                         <div class="Grid-cell u-md-size1of4 u-lg-size1of4 u-padding-r-left">
