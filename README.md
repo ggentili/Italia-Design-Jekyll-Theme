@@ -3,7 +3,11 @@
 This is a theme for Jekyll or GitHub Pages, created by G.Gentili  
 mailto:giovanni.gentili@gmail.com
 
+This is NOT an official release of Team digitale/AgID.  
+Use it at your own risk, there's no guarantee.  
+
 The theme implements the user interface guidelines for italian public web sites:  
+
 http://design-italia.readthedocs.io/it/stable/doc/user-interface.html
 
 The theme uses components from the "Web Toolkit Reference Implentation" available here:  
