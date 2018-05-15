@@ -56,6 +56,7 @@ links_leads_title: A est rerum leads
 markdown:          kramdown
 paginate:          5
 paginate_path:     "/posts/page:num/"#
+locale: "it-IT"
 plugins:
   - jekyll-feed
   - jekyll-paginate
