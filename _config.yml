@@ -39,6 +39,18 @@ privacy_url: "http://abc.github.io/privacy"
 note_legali_url: "http://abc.github.io/note_legali"
 contatti_url: "http://abc.github.io/contatti"
 
+# Home sections
+links_buttons: true
+links_buttons_title: Autem entrypoint
+posts_list: true
+posts_list_title: Autem reiciendis post
+section_lists: true
+section_lists_title: Dignissimos recusandae landing
+twitter_list: true
+twitter_list_title: Twitter@amministrazione
+links_leads: true
+links_leads_title: A est rerum leads
+
 # Build settings
 # permalink: /:categories/:title/
 markdown:          kramdown

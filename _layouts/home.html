@@ -4,12 +4,13 @@ layout: default
 
 <div id="main">
 
-
     {{ content }}
 
 
-    <!-- "buttons" (links_buttons.yml) -->
+    {% if site.links_buttons %}
+    <!-- from _data/links_buttons.yml -->
     <div class="u-layout-wide u-layoutCenter u-padding-r-bottom u-margin-r-bottom u-layout-r-withGutter">
+        <h2 class="u-padding-r-bottom u-padding-r-top u-text-r-l">{{ site.links_buttons_title }}</h2>
         <div class="Grid Grid--withGutter">
             <div class="Grid-cell u-md-size1of3 u-lg-size1of3">
                 <div class="Entrypoint-item u-background-50">
@@ -31,14 +32,15 @@ layout: default
             </div>
         </div>
     </div>
+    {% endif %}
 
-
-    <!-- Recent Posts (posts/) -->
+    {% if site.posts_list %}
+    <!-- recent posts from posts/*.html -->
     <div class="u-background-grey-20 u-text-r-xxl u-padding-r-top u-padding-r-bottom">
         <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
             <div class="u-layout-centerContent u-background-grey-20 u-padding-r-bottom">
                 <section class="u-layout-wide">
-                    <h2 class="u-padding-r-bottom u-padding-r-top u-text-r-l">Autem reiciendis post</h2>
+                    <h2 class="u-padding-r-bottom u-padding-r-top u-text-r-l">{{ site.posts_list_title }}</h2>
 
                     <div class="Grid Grid--withGutter">
 
@@ -49,7 +51,7 @@ layout: default
                             <div class="Grid u-layout-centerContent">
                                 <div class="Grid-cell u-sizeFit">
                                   {% if post.background %}
-                                    <img src="{{ post.background }}" class="u-sizeFit" alt="primo post" />
+                                    <img src="{{ post.background | relative_url }}" class="u-sizeFit" alt="primo post" />
                                   {% else %}
                                     <img src="//placehold.it/330x330?text=placeholder" class="u-sizeFit" alt="primo post" />
                                   {% endif %}
@@ -66,7 +68,7 @@ layout: default
                                             <span class="u-text-r-xxs u-textSecondary u-textWeight-400 u-lineHeight-xl u-cf">{{ post.date | date: '%d %B %Y' }}</span>
                                         </p>
                                         <h3 class="u-padding-r-top u-padding-r-bottom">
-                                          <a class="u-text-h4 u-textClean u-color-black" href="">{{ post.title }}</a>
+                                          <a class="u-text-h4 u-textClean u-color-black" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a>
                                         </h3>
                                         <p class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
                                             {% if post.subtitle %}
@@ -185,11 +187,13 @@ layout: default
 
         </div>
     </div>
+    {% endif %}
 
 
-    <!-- section "landing" (section_lists.yml) -->
+    {% if site.section_lists %}
+    <!-- "landing section" from _data/section_lists.yml -->
     <section class="u-layout-wide u-layout-withGutter u-layoutCenter u-padding-r-top">
-        <h1 class="u-text-h2">Sezione landing</h1>
+        <h1 class="u-text-h2">{{ site.section_lists_title }}</h1>
         <div class="Grid Grid--withGutter">
 
             <div class="Grid-cell u-sm-size1of2 u-md-size1of2 u-lg-size1of3 u-padding-r-all">
@@ -314,14 +318,16 @@ layout: default
 
         </div>
     </section>
+    {% endif %}
 
+    {% if site.twitter_list %}
     <!-- twitter list (manual) -->
     <div class="u-background-70 u-padding-r-top u-padding-r-bottom">
         <div class="u-layout-centerContent u-background-70 u-padding-r-all">
             <section class="u-layout-medium">
                 <div class="Grid">
                     <div class="Grid-cell u-layout-centerLeft">
-                        <h2 class="u-text-r-l"><a class="u-color-white" href="">Twitter @amministrazione</a></h2>
+                        <h2 class="u-text-r-l"><a class="u-color-white" href="">{{ site.twitter_list_title  }</a></h2>
                     </div>
                 </div>
                 <div class="u-text-r-xxl u-padding-r-top">
@@ -396,12 +402,15 @@ layout: default
         </div>
 
     </div>
+    {% endif %}
 
-    <!-- "leads" (links_leads.yml) -->
+
+    {% if site.links_leads %}
+    <!-- "leads" from _data/links_leads.yml -->
     <div class="u-background-grey-20 u-background-grey-20 u-color-black u-text-xxl u-padding-r-top u-padding-r-bottom">
         <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
             <section class="u-padding-r-top u-padding-r-bottom">
-                <h2 class="u-text-h3 u-layout-centerLeft">A est rerum leads</h2>
+                <h2 class="u-text-h3 u-layout-centerLeft">{{ site.links_leads_title }}</h2>
                 <ul class="Grid Grid--withGutter">
 
                     {% for item in site.data.links_leads %}
@@ -415,5 +424,4 @@ layout: default
 
         </div>
     </div>
-
-{{ content }}
+    {% endif %}
