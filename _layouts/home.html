@@ -10,7 +10,9 @@ layout: default
     {% if site.links_buttons %}
     <!-- from _data/links_buttons.yml -->
     <div class="u-layout-wide u-layoutCenter u-padding-r-bottom u-margin-r-bottom u-layout-r-withGutter">
+        {% if site.links_buttons_title %}
         <h2 class="u-padding-r-bottom u-padding-r-top u-text-r-l">{{ site.links_buttons_title }}</h2>
+        {% endif %}
         <div class="Grid Grid--withGutter">
             <div class="Grid-cell u-md-size1of3 u-lg-size1of3">
                 <div class="Entrypoint-item u-background-50">
@@ -317,7 +319,7 @@ layout: default
 
     {% if site.links_leads %}
     <!-- "leads" from _data/links_leads.yml -->
-    <div class="u-background-grey-20 u-background-grey-20 u-color-black u-text-xxl u-padding-r-top u-padding-r-bottom">
+    <div class="u-background-grey-20 u-background-grey-20 u-color-black u-text-xxl u-padding-r-bottom">
         <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
             <section class="u-padding-r-top u-padding-r-bottom">
                 <h2 class="u-text-h3 u-layout-centerLeft">{{ site.links_leads_title }}</h2>

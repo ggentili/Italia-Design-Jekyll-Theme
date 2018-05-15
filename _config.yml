@@ -46,7 +46,7 @@ posts_list: true
 posts_list_title: Autem reiciendis post
 section_lists: true
 section_lists_title: Dignissimos recusandae landing
-twitter_list: false
+twitter_list: true
 twitter_list_title: Twitter@amministrazione
 links_leads: true
 links_leads_title: A est rerum leads
