@@ -17,7 +17,7 @@ mega_menu_accedi: false
 
 # Social profiles
 social_block: true
-social_username: "&commat;AdUmbria"    # short
+social_username: "&commat;Account"    # short
 medium_username: abcuser
 facebook_username: abcuser
 twitter_username:  abcuser
