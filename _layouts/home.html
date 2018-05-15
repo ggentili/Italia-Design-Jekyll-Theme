@@ -43,7 +43,7 @@ layout: default
                     <div class="Grid Grid--withGutter">
 
                     {% for post in site.posts limit : 6 %}
-                      {% if post.first %}
+                      {% if forloop.first %}
                         <div class="Grid-cell u-nbfc u-md-size3of4 u-lg-size3of4">
 
                             <div class="Grid u-layout-centerContent">
@@ -76,7 +76,7 @@ layout: default
                                             {% endif %}
                                         </p>
                                     </div>
-                      {% if post.first %}
+                      {% if forloop.first %}
                                 </div>
                             </div>
                       {% endif %}
@@ -404,21 +404,11 @@ layout: default
                 <h2 class="u-text-h3 u-layout-centerLeft">A est rerum leads</h2>
                 <ul class="Grid Grid--withGutter">
 
+                    {% for item in site.data.links_leads %}
                     <li class="Grid-cell u-sizeFull u-md-size1of4 u-lg-size1of4">
-                        <a class="Leads-link u-color-black" href="">lead 1</a>
+                        <a class="Leads-link u-color-black" href="{{ item.url }}">{{ item.title }}</a>
                     </li>
-
-                    <li class="Grid-cell u-sizeFull u-md-size1of4 u-lg-size1of4">
-                        <a class="Leads-link u-color-black" href="">lead 2</a>
-                    </li>
-
-                    <li class="Grid-cell u-sizeFull u-md-size1of4 u-lg-size1of4">
-                        <a class="Leads-link u-color-black" href="">lead 3</a>
-                    </li>
-
-                    <li class="Grid-cell u-sizeFull u-md-size1of4 u-lg-size1of4">
-                        <a class="Leads-link u-color-black" href="">lead 4</a>
-                    </li>
+                    {% endfor %}
 
                 </ul>
             </section>
