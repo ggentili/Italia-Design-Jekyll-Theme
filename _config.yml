@@ -38,9 +38,9 @@ recapiti3: autem reiciendis maiores
 recapiti4: Tel. (+00) 00.0000.0000
 email: your-email@example.it
 pec: your-pec@example.it
-privacy_url: "http://abc.github.io/privacy"
-note_legali_url: "http://abc.github.io/note_legali"
-contatti_url: "http://abc.github.io/contatti"
+privacy_url: "http://entepubblico.it/privacy"
+note_legali_url: "http://entepubblico.it/note_legali"
+contatti_url: "contatti"
 
 # Home sections
 links_buttons: true
