@@ -2,76 +2,79 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% if page.background %}
-<div class="u-sizeFull" style="height: 350px; background-size: cover; background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
-{% else %}
-<div class="u-sizeFull">
-{% endif %}
+<div id="main">
+  
+  <!-- Post Title -->
+  {% if page.background %}
+  <div class="u-sizeFull" style="height: 350px; background-size: cover; background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  {% else %}
+  <div class="u-sizeFull">
+  {% endif %}
+
+    <div class="u-layout-wide u-layoutCenter u-text-r-l u-padding-r-top u-margin-r-bottom u-layout-r-withGutter">
+      <section class="Grid">
+        <div class="Grid-cell u-sizeFull u-md-size2of3 u-lg-size2of3">
+          <h1 class="u-text-h1 u-color-{% if page.titles_color %}{{ page.titles_color }}{% else %}black{% endif %}">{{ page.title }}</h1>
+          {% if page.subtitle %}
+          <h2 class="u-text-h2 u-color-{% if page.titles_color %}{{ page.titles_color }}{% else %}black{% endif %}">{{ page.subtitle }}</h2>
+          {% endif %}
+          {% if page.author %}
+          <h3 class="u-text-h3 u-color-{% if page.titles_color %}{{ page.titles_color }}{% else %}black{% endif %}">{{ page.author }}</h3>
+          {% endif %}
+          {% if page.date %}
+          <br>
+          <span class="meta u-color-{% if page.titles_color %}{{ page.titles_color }}{% else %}black{% endif %}">{{ page.date | date: '%B %d, %Y' }}</span>
+          <br>
+          {% endif %}
+        </div>
+      <section>
+    </div>
+
+  </div>
 
   <div class="u-layout-wide u-layoutCenter u-text-r-l u-padding-r-top u-margin-r-bottom u-layout-r-withGutter">
     <section class="Grid">
-      <div class="Grid-cell u-sizeFull u-md-size1of2 u-lg-size1of2">
-        <h1 class="u-text-h1 u-color-{% if page.titles_color %}{{ page.titles_color }}{% else %}black{% endif %}">{{ page.title }}</h1>
-        {% if page.subtitle %}
-        <h2 class="u-text-h2 u-color-{% if page.titles_color %}{{ page.titles_color }}{% else %}black{% endif %}">{{ page.subtitle }}</h2>
-        {% endif %}
-        {% if page.author %}
-        <h3 class="u-text-h3 u-color-{% if page.titles_color %}{{ page.titles_color }}{% else %}black{% endif %}">{{ page.author }}</h3>
-        {% endif %}
-        {% if page.date %}
-        <br>
-        <span class="meta u-color-{% if page.titles_color %}{{ page.titles_color }}{% else %}black{% endif %}">{{ page.date | date: '%B %d, %Y' }}</span>
-        <br>
-        {% endif %}
+      <div class="Grid-cell u-sizeFull u-md-size2of3 u-lg-size2of3">
+
+        <article class="Prose u-layout-prose">
+
+        {{ content }}
+
+        </article>
+
       </div>
-    <section>
-  </div>
 
-</div>
-
-<div class="u-layout-wide u-layoutCenter u-text-r-l u-padding-r-top u-margin-r-bottom u-layout-r-withGutter">
-  <section class="Grid">
-    <div class="Grid-cell u-sizeFull u-md-size1of2 u-lg-size1of2">
-
-      <article class="Prose u-layout-prose">
-      <!div class="u-lineHeight-l u-text-r-xs u-textSecondary u-padding-r-right">
-
-      {{ content }}
-
-      <br>
-
-      {% if page.previous.url %}
-      <a class="Button Button--default u-text-r-xxs" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Precedente</a>
-      {% endif %}
-      {% if page.next.url %}
-      <a class="Button Button--default u-text-r-xxs" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Successivo</span> &rarr;</a>
-      {% endif %}
-
-      <br>
-
-      </article>
-      <!/div>
-
-    </div>
-
-    <div class="Grid-cell u-sizeFull u-md-size1of2 u-lg-size1of2 u-text-r-s u-padding-r-all">
-      <div class="Share">
-        <div class="Share-reveal js-Share">
-            <a href="#share-options" class="Share-revealText" data-menu-trigger="share-options" data-menu-inline>
-          <span class="Share-revealIcon Icon Icon-share"></span>
-          Condividi
-        </a>
+      <div class="Grid-cell u-sizeFull u-md-size1of3 u-lg-size1of3 u-text-r-s u-padding-r-all">
+        <div class="Share">
+          <div class="Share-reveal js-Share">
+              <a href="#share-options" class="Share-revealText" data-menu-trigger="share-options" data-menu-inline>
+            <span class="Share-revealIcon Icon Icon-share"></span>
+            Condividi
+          </a>
+          </div>
+          <ul id="share-options" class="Dropdown-menu" data-menu>
+              <li><a href="#" title=""><span class="Icon Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
+              <li><a href="#"><span class="Icon Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
+              <li><a href="#"><span class="Icon Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
+              <li><a href="#"><span class="Icon Icon-slideshare"></span><span class="u-hiddenVisually">Slideshare</span></a></li>
+              <li><a href="#"><span class="Icon Icon-whatsapp"></span><span class="u-hiddenVisually">Whatsapp</span></a></li>
+          </ul>
         </div>
-        <ul id="share-options" class="Dropdown-menu" data-menu>
-            <li><a href="#" title=""><span class="Icon Icon-facebook"></span><span class="u-hiddenVisually">Facebook</span></a></li>
-            <li><a href="#"><span class="Icon Icon-twitter"></span><span class="u-hiddenVisually">Twitter</span></a></li>
-            <li><a href="#"><span class="Icon Icon-youtube"></span><span class="u-hiddenVisually">Youtube</span></a></li>
-            <li><a href="#"><span class="Icon Icon-slideshare"></span><span class="u-hiddenVisually">Slideshare</span></a></li>
-            <li><a href="#"><span class="Icon Icon-whatsapp"></span><span class="u-hiddenVisually">Whatsapp</span></a></li>
-        </ul>
       </div>
-    </div>
 
-  </section>
+      <div class="Grid-cell u-sizeFull">
+        <br>
+
+        {% if page.previous.url %}
+        <a class="Button Button--default u-text-r-xxs" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Pagina precedente</a>
+        {% endif %}
+        {% if page.next.url %}
+        <a class="Button Button--default u-text-r-xxs" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Pagina successiva</span> &rarr;</a>
+        {% endif %}
+
+        <br>
+      </div>
+
+    </section>
+  </div>
 </div>
