@@ -1,4 +1,4 @@
-# Italia-Design-Jekyll-Theme - v1.0 by G.Gentili 2018
+# Italia-Design-Jekyll-Theme - v0.9 by G.Gentili 2018
 
 This is a theme for Jekyll or GitHub Pages, created by G.Gentili  
 mailto:giovanni.gentili@gmail.com
