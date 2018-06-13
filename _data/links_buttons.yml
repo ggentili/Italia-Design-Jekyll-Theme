@@ -1,8 +1,8 @@
 - title: "Link in evidenza 1"
-  url: /collection-archive
+  url: /informazioni
   list:
     - title: "Link in evidenza 1.1"
-      url: /post-archive
+      url: /contatti
     - title: "Link in evidenza 1.2"
       url: /page-archive
 
