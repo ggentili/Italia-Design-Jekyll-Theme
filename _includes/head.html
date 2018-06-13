@@ -10,7 +10,9 @@
   <script src="italia_build/vendor/modernizr.js"></script>
 
   <link media="all" rel="stylesheet" href="{{"italia_build/build.css" | relative_url }}">
+  {% if site.personalizza_css %}
   <link media="all" rel="stylesheet" href="{{"assets/personalizza.css" | relative_url }}">
+  {% endif %}
 
   <script src="{{"italia_build/vendor/jquery.min.js" | relative_url }}"></script>
 

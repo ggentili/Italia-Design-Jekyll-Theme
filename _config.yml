@@ -4,10 +4,11 @@ baseurl:           "/"
 url:               "https://abc.github.io"
 
 # Header data
+personalizza_css: false
 header_parent_title: Nome ente sovraordinato
 header_parent_url: "http://entepubblico.it"
 header_language_selector: false
-header_logo: assets/images/LogoRegione85x96.svg
+header_logo: https://placehold.it/75x80?text=header_logo
 header_title: Nome ente o titolo del sito
 header_subtitle: sottotitolo
 search: true
@@ -26,7 +27,7 @@ linkedin_username:
 github_username: abcuser
 
 # Footer data
-footer_logo: assets/images/LogoRegioneWhite.png
+footer_logo: https://placehold.it/75x80?text=footer_logo
 footer_title: Nome ente
 footer_subtitle: sottotitolo
 recapiti1: Recapiti
