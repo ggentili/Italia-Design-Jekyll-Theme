@@ -158,11 +158,11 @@
                         <li><a href="{{ sub_item.url }}">{{ sub_item.title }}</a></li>
                           {% if sub_item.dropdown %}
                             <ul>
-                              {% for sub2_item in item.dropdown %}
+                              {% for sub2_item in sub_item.dropdown %}
                                 <li><a href="{{ sub2_item.url }}">{{ sub2_item.title }}</a></li>
                                   {% if sub2_item.dropdown %}
                                     <ul>
-                                      {% for sub3_item in item.dropdown %}
+                                      {% for sub3_item in sub2_item.dropdown %}
                                         <li><a href="{{ sub3_item.url }}">{{ sub3_item.title }}</a></li>
                                       {% endfor %}
                                     </ul>
