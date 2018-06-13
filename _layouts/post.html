@@ -4,32 +4,31 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="u-sizeFull" style="height: 350px; background-size: cover; background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<div class="u-sizeFull" style="height: 350px; background-size: cover; background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
 {% else %}
-<header class="u-sizeFull">
+<div class="u-sizeFull">
 {% endif %}
 
   <div class="u-layout-wide u-layoutCenter u-text-r-l u-padding-r-top u-margin-r-bottom u-layout-r-withGutter">
     <section class="Grid">
       <div class="Grid-cell u-sizeFull">
-        <div class="post-heading">
-          <h1 class="u-text-h1 u-color-black">{{ page.title }}</h1>
-          {% if page.subtitle %}
-          <h2 class="u-text-h2 u-color-black">{{ page.subtitle }}</h2>
-          {% endif %}
-          {% if page.author %}
-          <h23 class="u-text-h3 u-color-black">{{ page.author }}</h3>
-          {% endif %}
-          {% if page.date %}
-          <span class="meta">{{ page.date | date: '%B %d, %Y' }}</span>
-          <br>
-          {% endif %}
-        </div>
+        <h1 class="u-text-h1 u-color-{% if titles_color %}{{ titles_color }}{% else %}black{% endif %}">{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <h2 class="u-text-h2 u-color-{% if titles_color %}{{ titles_color }}{% else %}black{% endif %}">{{ page.subtitle }}</h2>
+        {% endif %}
+        {% if page.author %}
+        <h23 class="u-text-h3 u-color-{% if titles_color %}{{ titles_color }}{% else %}black{% endif %}">{{ page.author }}</h3>
+        {% endif %}
+        {% if page.date %}
+        <br>
+        <span class="meta u-color-{% if titles_color %}{{ titles_color }}{% else %}black{% endif %}">{{ page.date | date: '%B %d, %Y' }}</span>
+        <br>
+        {% endif %}
       </div>
     <section>
   </div>
 
-</header>
+</div>
 
 <div class="u-layout-wide u-layoutCenter u-text-r-l u-padding-r-top u-margin-r-bottom u-layout-r-withGutter">
   <section class="Grid">
