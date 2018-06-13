@@ -23,9 +23,6 @@
   - title: "VOLUPTATEM ELIGENDI LABORIOSAM"
     url: posts
 
-  - title: "BLANDIS SOLUTA EXERCITATIONEM"
-    url: posts
-
   - title: "AUTEM REICIENDIS MAIORES"
     url: categories
     dropdown:
@@ -33,6 +30,11 @@
         url: categories
       - title: "Sed et velit"
         url: categories
+        dropdown:
+          - title: "Sub rem similique expedita"
+            url: posts
+          - title: "Sub autem reciciendis maiores"
+            url: posts
       - title: "Laboriosam porro dolor"
         url: categories
 
