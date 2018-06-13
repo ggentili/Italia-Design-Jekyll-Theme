@@ -1,6 +1,9 @@
 /* personalizzazione di colori e stili  */
-/* esempio colori "toni rossi" by gg 16.02.2018 */
-/* disattivare l'opzione o rimuovere questo file css per i colori standard "italia design" */
+
+/* attivare personalizza_css: true per usare questo file css */
+/* altrimenti saranno usati i colori standard "italia design" */
+
+/* qui sotto esempio di colori "rosso umbro" by gg 16.02.2018 */
 
 :root {
   --Color-primary: #B7282E;
