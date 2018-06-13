@@ -2,6 +2,7 @@ title:             "Italia Design Jekyll Theme - by G.Gentili 2018"
 description:       "A theme for Jekyll or GitHub Pages derived from Clean Blog by Start Bootstrap"
 baseurl:           "/"
 url:               "https://ggentili.github.io/Italia-Design-Jekyll-Theme/"
+author:            "Redazione"
 
 # Colors and styles
 personalizza_css: false

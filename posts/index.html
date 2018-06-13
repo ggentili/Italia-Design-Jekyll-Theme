@@ -1,27 +1,28 @@
 ---
 layout: page
-title: Posts
+title: Posts Archive
 background: '/img/bg-post.jpg'
 ---
 
+<!-- List of posts -->
 {% for post in paginator.posts %}
 
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-      <h2 class="post-title">{{ post.title }}</h2>
+      <h2 class="u-text-h2 u-color-black">{{ post.title }}</h2>
       {% if post.subtitle %}
-      <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+      <h3 class="u-text-h3 u-color-black">{{ post.subtitle }}</h3>
       {% else %}
-      <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
       {% endif %}
     </a>
-    <p class="post-meta">Posted by
+    <p class="post-meta">Autore:
       {% if post.author %}
         {{ post.author }}
       {% else %}
         {{ site.author }}
       {% endif %}
-      on {{ post.date | date: '%B %d, %Y' }}</p>
+      Data: {{ post.date | date: '%B %d, %Y' }}</p>
   </article>
 
   <hr>
@@ -31,16 +32,18 @@ background: '/img/bg-post.jpg'
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
 
-  <div class="clearfix">
+      <div class="Grid-cell u-sizeFull">
+        <br>
 
-    {% if paginator.previous_page %}
-      <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer<span class="d-none d-md-inline"> Posts</span></a>
-    {% endif %}
+        {% if paginator.previous_page %}
+          <a class="Button Button--default u-text-r-xxs" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer<span class="d-none d-md-inline"> Posts</span></a>
+        {% endif %}
 
-    {% if paginator.next_page %}
-      <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-    {% endif %}
+        {% if paginator.next_page %}
+          <a class="Button Button--default u-text-r-xxs" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
+        {% endif %}
 
-  </div>
+        <br>
+      </div>
 
 {% endif %}
