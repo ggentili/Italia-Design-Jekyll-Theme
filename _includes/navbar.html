@@ -150,55 +150,34 @@
       </div>
       <nav>
           <ul class="Linklist Linklist--padded Treeview Treeview--default js-Treeview u-text-r-xs">
-              <li><a href="https://example.com">A est rerum</a>
-                  <ul>
-                      <li><a href="https://example.com">Autem reiciendis maiores</a></li>
-                      <li><a href="https://example.com">Blanditiis soluta exercitationem</a></li>
-                      <li>
-                          <a href="https://example.com">Voluptatem eligendi laboriosam</a>
-                          <ul>
-                              <li><a href="https://example.com">Laboriosam porro dolor</a></li>
-                              <li><a href="https://example.com">Sed et velit</a>
-                                  <ul>
-                                      <li><a href="https://example.com">Sed et velit</a></li>
-                                      <li><a href="https://example.com">Autem quae numquam</a></li>
-                                      <li><a href="https://example.com">Nulla quibusdam necessitatibus</a></li>
-                                  </ul>
-                              </li>
-                              <li><a href="https://example.com">Voluptatibus esse corporis</a></li>
-                          </ul>
-                      </li>
-                      <li><a href="https://example.com">Rem similique expedita</a></li>
-                      <li><a href="https://example.com">A est rerum</a></li>
-                  </ul>
-              </li>
-              <li><a href="https://example.com">Voluptatibus esse corporis</a>
-                  <ul>
-                      <li><a href="https://example.com">Voluptatem eligendi laboriosam</a></li>
-                      <li><a href="https://example.com">Blanditiis soluta exercitationem</a></li>
-                      <li><a href="https://example.com">Autem reiciendis maiores</a>
-                          <ul>
-                              <li><a href="https://example.com">Autem quae numquam</a></li>
-                              <li><a href="https://example.com">Sed et velit</a></li>
-                              <li><a href="https://example.com">Laboriosam porro dolor</a></li>
-                          </ul>
-                      </li>
-                      <li><a href="https://example.com">Nulla quibusdam necessitatibus</a></li>
-                      <li><a href="https://example.com">Voluptatibus esse corporis</a>
-                          <ul>
-                              <li><a href="https://example.com">Rem similique expedita</a></li>
-                              <li><a href="https://example.com">Autem reiciendis maiores</a></li>
-                              <li><a href="https://example.com">Blanditiis soluta exercitationem</a></li>
-                              <li><a href="https://example.com">Voluptatem eligendi laboriosam</a></li>
-                              <li><a href="https://example.com">Laboriosam porro dolor</a></li>
-                              <li><a href="https://example.com">Sed et velit</a></li>
-                              <li><a href="https://example.com">Autem quae numquam</a></li>
-                              <li><a href="https://example.com">Nulla quibusdam necessitatibus</a></li>
-                              <li><a href="https://example.com">Voluptatibus esse corporis</a></li>
-                          </ul>
-                      </li>
-                  </ul>
-              </li>
+              {% for item in site.data.menu %}
+                <li><a href="{{ item.url }}">{{ item.title }}</a>
+                  {% if item.dropdown %}
+                    <ul>
+                      {% for sub_item in item.dropdown %}
+                        <li><a href="{{ sub_item.url }}">{{ sub_item.title }}</a></li>
+                          {% if sub_item.dropdown %}
+                            <ul>
+                              {% for sub2_item in item.dropdown %}
+                                <li><a href="{{ sub2_item.url }}">{{ sub2_item.title }}</a></li>
+                                  {% if sub2_item.dropdown %}
+                                    <ul>
+                                      {% for sub3_item in item.dropdown %}
+                                        <li><a href="{{ sub3_item.url }}">{{ sub3_item.title }}</a></li>
+                                      {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          {% endif %}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+
               {% if site.mega_menu_accedi %}
               <li data-megamenu-class="u-hidden">
                   <a class="Button u-border-none u-color-95 u-background-compl u-text-r-xxs" href="#">Accedi</a>

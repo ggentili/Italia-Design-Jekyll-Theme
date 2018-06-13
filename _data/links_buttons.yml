@@ -1,13 +1,13 @@
 - title: "Link in evidenza 1"
-  url: /informazioni
+  url: informazioni
   list:
     - title: "Link in evidenza 1.1"
-      url: /contatti
+      url: contatti
     - title: "Link in evidenza 1.2"
-      url: /posts
+      url: posts
 
 - title: "Link in evidenza 2"
-  url: /categories
+  url: categories
 
 - title: "Link in evidenza 3"
-  url: /tags
+  url: tags
