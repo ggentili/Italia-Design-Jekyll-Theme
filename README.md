@@ -17,4 +17,4 @@ Some part of the theme is derived from "Clean Blog by Start Bootstrap" available
 https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll
 
 # Copyright and License
-Copyright 2018 G.Gentili - Code released under the MIT license.
+Code released under the MIT license.

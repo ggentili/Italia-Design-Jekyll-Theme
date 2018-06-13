@@ -1,12 +1,14 @@
-title:             "Italia Design Web Toolkit Jekyll Theme by G.Gentili 2018"
-description:       "A jekyll theme derived from Clean Blog by Start Bootstrap"
+title:             "Italia Design Jekyll Theme - by G.Gentili 2018"
+description:       "A theme for Jekyll or GitHub Pages derived from Clean Blog by Start Bootstrap"
 baseurl:           "/"
-url:               "https://abc.github.io"
+url:               "https://entepubblico.github.io"
+
+# Colors and styles
+personalizza_css: false
 
 # Header data
-personalizza_css: false
 header_parent_title: Nome ente sovraordinato
-header_parent_url: "http://entepubblico.it"
+header_parent_url: "http://entepubblico-sovraordinato.it"
 header_language_selector: false
 header_logo: https://placehold.it/75x80?text=header_logo
 header_title: Nome ente o titolo del sito

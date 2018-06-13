@@ -1,9 +1,9 @@
 /* personalizzazione di colori e stili  */
 
-/* attivare personalizza_css: true per usare questo file css */
-/* altrimenti saranno usati i colori standard "italia design" */
+/* set "personalizza_css: true" to activate the use of this css file */
+/* otherwise will be used the standard color from "italia design" */
 
-/* qui sotto esempio di colori "rosso umbro" by gg 16.02.2018 */
+/* below an example of personalized colors "rosso umbro" by gg 16.02.2018 */
 
 :root {
   --Color-primary: #B7282E;
