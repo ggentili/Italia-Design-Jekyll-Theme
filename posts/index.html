@@ -8,12 +8,12 @@ background: '/img/bg-post.jpg'
 {% for post in paginator.posts %}
 
   <article class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+    <a class="u-text-h2 u-textClean u-color-black" href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
       <h2 class="u-text-h2 u-textClean u-color-black">{{ post.title }}</h2>
       {% if post.subtitle %}
-      <h3 class="u-text-h3 u-textClean u-color-black">{{ post.subtitle }}</h3>
+        <h3 class="u-text-h3 u-textClean u-color-black">{{ post.subtitle }}</h3>
       {% else %}
-      <p class="u-text-h5 u-textClean u-color-black">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <p class="u-text-h5 u-textClean u-color-black">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
       {% endif %}
     </a>
     <p class="post-meta">Autore:
