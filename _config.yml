@@ -4,9 +4,6 @@ baseurl:           "/"
 url:               "https://ggentili.github.io/Italia-Design-Jekyll-Theme/"
 author:            "Redazione"
 
-# Colors and styles
-personalizza_css: false
-
 # Header data
 header_parent_title: Nome ente sovraordinato
 header_parent_url: "http://entepubblico-sovraordinato.it"
