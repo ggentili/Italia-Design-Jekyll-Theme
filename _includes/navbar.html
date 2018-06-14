@@ -155,15 +155,16 @@
                   {% if item.dropdown %}
                     <ul>
                       {% for sub_item in item.dropdown %}
-                        <li><a href="{{ sub_item.url }}">{{ sub_item.title }}</a></li>
+                        <li><a href="{{ sub_item.url }}">{{ sub_item.title }}</a>
                           {% if sub_item.dropdown %}
                             <ul>
                               {% for sub2_item in sub_item.dropdown %}
-                                <li><a href="{{ sub2_item.url }}">{{ sub2_item.title }}</a></li>
+                                <li><a href="{{ sub2_item.url }}">{{ sub2_item.title }}</a>
                                   {% if sub2_item.dropdown %}
                                     <ul>
                                       {% for sub3_item in sub2_item.dropdown %}
-                                        <li><a href="{{ sub3_item.url }}">{{ sub3_item.title }}</a></li>
+                                        <li><a href="{{ sub3_item.url }}">{{ sub3_item.title }}</a>
+                                        </li>
                                       {% endfor %}
                                     </ul>
                                     {% endif %}
