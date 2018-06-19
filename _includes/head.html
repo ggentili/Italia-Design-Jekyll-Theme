@@ -10,7 +10,7 @@
   <script src="{{"italia_build/vendor/modernizr.js" | relative_url }}"></script>
 
   <link media="all" rel="stylesheet" href="{{"italia_build/build.css" | relative_url }}">
-  {% if page.personalizza_css %}
+  {% if site.personalizza_css or page.personalizza_css %}
   <link media="all" rel="stylesheet" href="{{"assets/personalizza.css" | relative_url }}">
   {% endif %}
 
